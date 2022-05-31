@@ -1,0 +1,25 @@
+<ng-template #contentRef>
+    <div class="modal-container">
+        <div class="main-container main-new-message">
+            <div class="list-container list-new-message">
+              <div class="header-list">
+                <h4>Nova mensagens</h4>
+                <i class="bi bi-x icon-close-new-message" (click)="close()"></i>
+              </div>
+              <div class="search-list">
+                <input class="input" placeholder="Mensagem para" />
+                <i class="bi bi-search"></i>
+              </div>
+              <div class="header-list">
+                <h5>Sugestões</h5>
+              </div>
+              <div class="chat-list chat-list-new-message" *ngFor="let o of user">
+                <img class="img-chat" src="{{ o.img }}" />
+                <div class="info-content">
+                  <span class="info info-name">{{ o.name }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</ng-template>

@@ -1,0 +1,26 @@
+$boxShadow: -1px 3px 7px 1px #b1b1b173;
+$borderRadius20: 20px;
+$padding20: 20px;
+$bgWhite: #fff;
+
+.container {
+  max-width: 970px;
+  padding: $padding20;
+  border-radius: $borderRadius20;
+  border: none;
+  box-shadow: $boxShadow;
+  background: $bgWhite;
+  margin: 100px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .bi-x {
+    font-size: 26px;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+  }
+
+}

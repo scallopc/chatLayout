@@ -1,0 +1,142 @@
+<div class="container">
+    <i class="bi bi-x"></i>
+    <div class="main-container">
+      <div class="list-container">
+        <div class="header-list">
+          <h3>Mensagens</h3>
+          <i class="bi bi-pencil-square icon-new-message" (click)="showNewMessageModal()"></i>
+        </div>
+        <div class="search-list">
+          <input class="input" placeholder="Pesquisar" />
+          <i class="bi bi-search"></i>
+        </div>
+        <div class="chat-list" *ngFor="let o of user">
+          <!-- [ngClass]="'select' ? 'selected' : ''" -->
+          <img class="img-chat" src="{{ o.img }}" />
+          <div class="info-content">
+            <span class="info info-name">{{ o.name }}</span>
+            <small class="info info-lastMessage">{{ o.last_message }} </small>
+          </div>
+        </div>
+      </div>
+      <div class="message-container">
+        <div class="no-have-message">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="183.161"
+            height="127.549"
+            viewBox="0 0 183.161 127.549"
+          >
+            <g
+              id="img_message_default"
+              data-name="img message default"
+              transform="translate(0)"
+            >
+              <path
+                id="Path_264"
+                data-name="Path 264"
+                d="M188.767,86.347h99.824a12.78,12.78,0,0,1,12.766,12.766v54.611a12.78,12.78,0,0,1-12.766,12.766H188.767A12.78,12.78,0,0,1,176,153.725V99.113a12.78,12.78,0,0,1,12.766-12.766Z"
+                transform="translate(-176.001 -86.347)"
+                fill="#f2f2f2"
+              />
+              <path
+                id="Path_265"
+                data-name="Path 265"
+                d="M198.946,100.2H298.77a9.1,9.1,0,0,1,9.091,9.091V163.9a9.1,9.1,0,0,1-9.091,9.091H198.946a9.1,9.1,0,0,1-9.091-9.091V109.292A9.1,9.1,0,0,1,198.946,100.2Z"
+                transform="translate(-186.181 -96.526)"
+                fill="#fff"
+              />
+              <path
+                id="Path_266"
+                data-name="Path 266"
+                d="M221.513,401.286a2.291,2.291,0,0,1-.877-.177,2.22,2.22,0,0,1-1.392-2.083V380.147l25.169-.847-21.32,21.32a2.224,2.224,0,0,1-1.58.666Z"
+                transform="translate(-207.773 -301.59)"
+                fill="#f2f2f2"
+              />
+              <rect
+                id="Rectangle_112"
+                data-name="Rectangle 112"
+                width="85.946"
+                height="10.883"
+                rx="5.442"
+                transform="translate(19.583 17.259)"
+                fill="#f2f2f2"
+              />
+              <rect
+                id="Rectangle_113"
+                data-name="Rectangle 113"
+                width="85.946"
+                height="10.883"
+                rx="5.442"
+                transform="translate(19.705 34.63)"
+                fill="#f2f2f2"
+              />
+              <rect
+                id="Rectangle_114"
+                data-name="Rectangle 114"
+                width="85.946"
+                height="10.883"
+                rx="5.442"
+                transform="translate(19.826 52.001)"
+                fill="#f2f2f2"
+              />
+              <path
+                id="Path_267"
+                data-name="Path 267"
+                d="M506.508,191.347H406.684a12.78,12.78,0,0,0-12.766,12.766v54.612a12.78,12.78,0,0,0,12.766,12.766h99.824a12.78,12.78,0,0,0,12.766-12.766V204.113a12.78,12.78,0,0,0-12.766-12.766Z"
+                transform="translate(-336.113 -163.494)"
+                fill="#e6e6e6"
+              />
+              <path
+                id="Path_268"
+                data-name="Path 268"
+                d="M516.687,205.2H416.863a9.1,9.1,0,0,0-9.091,9.091V268.9a9.1,9.1,0,0,0,9.091,9.091h99.824a9.1,9.1,0,0,0,9.091-9.091V214.292A9.1,9.1,0,0,0,516.687,205.2Z"
+                transform="translate(-346.292 -173.673)"
+                fill="#fff"
+              />
+              <path
+                id="Path_269"
+                data-name="Path 269"
+                d="M730.681,505.62l-21.32-21.32,25.169.847v18.879a2.219,2.219,0,0,1-1.392,2.083,2.289,2.289,0,0,1-.877.177A2.223,2.223,0,0,1,730.681,505.62Z"
+                transform="translate(-567.88 -378.737)"
+                fill="#e6e6e6"
+              />
+              <circle
+                id="Ellipse_11"
+                data-name="Ellipse 11"
+                cx="6.897"
+                cy="6.897"
+                r="6.897"
+                transform="translate(91.569 61.027)"
+                fill="#e6e6e6"
+              />
+              <circle
+                id="Ellipse_12"
+                data-name="Ellipse 12"
+                cx="6.897"
+                cy="6.897"
+                r="6.897"
+                transform="translate(113.586 61.027)"
+                fill="#e6e6e6"
+              />
+              <circle
+                id="Ellipse_13"
+                data-name="Ellipse 13"
+                cx="6.897"
+                cy="6.897"
+                r="6.897"
+                transform="translate(135.603 61.027)"
+                fill="#e6e6e6"
+              />
+            </g>
+          </svg>
+          <span>Envie fotos e mensagens particulares para um amigo</span>
+          <button class="btn-new-message" (click)="showNewMessageModal()">
+            <i class="bi bi-pencil-square"></i> Enviar Mensagem
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <app-new-message-modal #newMessageModal></app-new-message-modal>
